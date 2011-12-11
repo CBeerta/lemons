@@ -5,3 +5,27 @@ LEMONS
 Utilities, helpers and other useful stuffs for 
 [Limonade PHP](http://www.limonade-php.net).
 
+
+
+## Embedded Server (lemon_server.php) ##
+
+The Embedded Server Allows you to Develop A Limonade Application without having to setup a Webserver.
+
+All you need to do is to `require_once` the lemon_server.php directly before you issue the `run()` statement and you're good to go.
+
+Calling the Application from a CLI will then cause the Embedded Server to be started.
+
+For Help, call your bootstrap file with the `-h` parameter.
+
+    Usage: yourfile.php [OPTIONS]
+
+    Available Options:
+        -h, --help                   This Help
+        -x, --exit                   Exit the Server if a Source File has Changed
+        -l, --listen <addr:port>     Address to Listen on. Defaults to http://0.0.0.0:3001
+
+For Development run the Server in a Loop, and it will "Restart" if your Sourcefiles Change:
+
+    while (true) ; do php yourfile.php -x ; done
+
+
